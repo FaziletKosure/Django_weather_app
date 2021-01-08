@@ -39,10 +39,10 @@ background-position: top left;
     <h1 class="display-5">Weather Desktop App </h1>
     <h5>Using Python Language and Django Framework</h5>
 
-    <img src="{% static 'images/weather.png' %}" class="image" style="width:200px; margin-bottom:-50px; ">
+    <img src="{% static 'images/weather1.png' %}" class="image" style="width:200px; margin-bottom:-50px; ">
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin:10px 100px;border-radius:5px">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin:auto;border-radius:5px;width:30%">
     <form method="post"  class="col-md">
       {% csrf_token %}
       <div class=" input-group">
@@ -61,15 +61,16 @@ background-position: top left;
     <div class="col d-flex justify-content-center" ">
       <div class=" card text-white bg-light mb-6">
       <div class=" card-body weather-card">
-        <h4><span class="badge badge-primary">Country Code :</span> {{country_code}}</h4>
-        <h4><span class="badge badge-primary">City :</span> {{city}}</h4>
-        <h4><span class="badge badge-primary">Coordinates [X,Y] :</span> {{coordinate}}</h4>
-        <h4><span class="badge badge-primary">Temperature in Celsius :</span> {{temp}}</h4>
-        <h4><span class="badge badge-primary">Pressure :</span> {{pressure}} </h4>
-        <h4><span class="badge badge-primary">Humidity : </span> {{humidity}}</h4>
+       <span> <h4><span class="badge badge-primary">City :</span> {{city}}</h4></span>
+       <h4><span class="badge badge-primary">Country Code :</span> {{country_code}} </h4>
         <h4><span class="badge badge-primary">Forecast : </span> {{main}} <img
-            src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image" style="width:70px"></h4>
-        <h4><span class="badge badge-primary">Description : </span> {{description}}</h4>
+          src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image" style="width:100px"></h4>
+          <h4><span class="badge badge-primary">Temperature in Celsius :</span> {{temp}}</h4><br>
+      <h4><span class="badge badge-primary">Description : </span> {{description}}</h4><br>
+        <h4><span class="badge badge-primary">Coordinates [X,Y] :</span> {{coordinate}}</h4><br>
+        <h4><span class="badge badge-primary">Pressure :</span> {{pressure}} </h4><br>
+        <h4><span class="badge badge-primary">Humidity : </span> {{humidity}}</h4>
+
       </div>
       {% endif %}
     </div>
