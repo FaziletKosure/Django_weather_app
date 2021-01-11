@@ -4,7 +4,6 @@ from django.shortcuts import render, redirect
 from decouple import config
 import urllib.request
 import json
-from django.contrib import messages
 
 
 def index(request):
